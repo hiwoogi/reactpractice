@@ -9,20 +9,21 @@ export default function Form({value, setValue, handleSubmit}) {
   
   return (
     <div>
-      <form style={{ display: "flex" }} onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex pt-2">
         <input
           type="text"
           name="value"
-          style={{ flex: "10", padding: "5px" }}
+          className="w-full px-3 py-2 mr-4 text-gray-500 border rounded shadow" 
           value={value}
+          placeholder="해야 할 일을 입력하세요."
           onChange={handleChange}
         />
 
-        <input
+        <input 
           type="submit"
           value="입력"
-          className="btn"
-          style={{ flex: "1" }}
+          className="p-2 text-blue-400 border-2 rounded hover:text-white hover:bg-blue-200"
+         
         />
       </form>
     </div>
